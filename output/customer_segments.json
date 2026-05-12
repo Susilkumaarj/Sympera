@@ -1,0 +1,39 @@
+{
+  "customer_profile": {
+    "company": "Elite Builds LLC",
+    "industry": "Residential Construction",
+    "location": "Utah, USA",
+    "period": "2026-03"
+  },
+  "behavioral_segments": [
+    "Collect-first: revenue precedes outflows, no vendor-credit reliance",
+    "Reactive spend: 100% of debits within 7d of a credit (avg 3.2d)",
+    "Repeat dual-vendor sourcing on negotiated terms",
+    "Same-month savings + capex: deliberate capital allocation"
+  ],
+  "demographic_segments": [
+    "Privately held SMB contractor, multi-project, lower mid-market",
+    "$112K/mo revenue (~$1.34M run-rate); bi-monthly payroll $8.5K",
+    "Asset-light: leased equipment + active capex",
+    "4 projects/mo, top 40.2% (no concentration risk)"
+  ],
+  "psychographic_segments": [
+    "Growth-oriented: investing through industry downturn",
+    "Liquidity disciplinarian: capex + savings in parallel",
+    "Risk-aware procurement: repeat-vendor inflation hedge"
+  ],
+  "financial_signals": {
+    "op_margin_pct": 53.2,
+    "all_in_margin_pct": 39.8,
+    "industry_margin_pct": 4.0,
+    "revenue_usd": 112000,
+    "op_costs_usd": 52400,
+    "inflation_absorbed_usd": 4017,
+    "implied_reserves_usd": 41143,
+    "savings_rate_noi_pct": 8.4,
+    "capex_pct": 8.9,
+    "expense_velocity": "controlled",
+    "credit_risk": "low",
+    "recommended_product": "Asset-Backed Equipment Term Loan"
+  }
+}

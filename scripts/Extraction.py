@@ -20,10 +20,15 @@ MARKET = {
 
 
 def get_category(cat):
-    return [t for t in transactions if t["category"] == cat]
+    txns = [t for t in transactions if t["category"] == cat]
+    # Normalize amounts: convert negative values to positive
+    for t in txns:
+        if t["amount"] < 0:
+            t["amount"] = t["amount"] * -1
+    return txns
 
 def sum_amounts(txns):
-    return sum(t["amount"] for t in txns)
+    return sum(t["amount"] * -1 if t["amount"] < 0 else t["amount"] for t in txns)
 
 
 # Group by category
@@ -61,8 +66,8 @@ all_in_margin_pct = (all_in_net_income / total_revenue) * 100
 
 expense_velocity = (operating_costs / total_revenue) * 100
 
-credits = sorted([t for t in transactions if t["amount"] > 0], key=lambda x: x["date_obj"])
-debits  = sorted([t for t in transactions if t["amount"] < 0 and t["category"] != "Savings"],
+credits = sorted([t for t in transactions if t["type"] == "Credit"], key=lambda x: x["date_obj"])
+debits  = sorted([t for t in transactions if t["type"] == "Debit" and t["category"] != "Savings"],
                  key=lambda x: x["date_obj"])
 
 timing_gaps = []
